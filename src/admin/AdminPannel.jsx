@@ -14,19 +14,17 @@ import { useTheme } from "@mui/material/styles";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import ListItemIcon from "@mui/material/ListItemIcon";
-import { customTheme } from "./them/customeThem";
-import AdminNavbar from "./Navigation/AdminNavbar";
+import { customTheme } from "./theme/customTheme";
+import AdminNavbar from "./navigation/AdminNavbar";
 import Dashboard from "./Views/Admin";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import DemoAdmin from "./Views/DemoAdmin";
-import CreateProductForm from "./componets/createProduct/CreateProductFrom";
-import CreateProuductDemo from "./componets/createProduct/CreateProuductDemo";
-import CreateProduct from "../customer/Components/Create/CreateProduct";
+import CreateProductForm from "./components/createProduct/CreateProductForm";
 import "./AdminPannel.css";
-import ProductsTable from "./componets/Products/ProductsTable";
-import OrdersTable from "./componets/Orders/OrdersTable";
-import Customers from "./componets/customers/customers";
-import UpdateProductForm from "./componets/updateProduct/UpdateProduct";
+import ProductsTable from "./components/products/ProductsTable";
+import OrdersTable from "./components/orders/OrderTable";
+import Customers from "./components/customers/customers";
+import UpdateProductForm from "./components/updateProduct/UpdateProduct";
 
 const drawerWidth = 240;
 

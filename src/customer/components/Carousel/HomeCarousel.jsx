@@ -1,7 +1,7 @@
 import React from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import { homeCarouselData } from "./HomeCaroselData";
+import { homeCarouselData } from "./HomeCarouselData";
 import { useNavigate } from "react-router-dom";
 
 const handleDragStart = (e) => e.preventDefault();

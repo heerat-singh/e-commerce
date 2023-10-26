@@ -11,12 +11,11 @@ import {
 } from "@mui/material";
 
 import { Fragment } from "react";
-// import "./CreateProductForm.css";
 import { useDispatch, useSelector } from "react-redux";
 import {
     findProductById,
     updateProduct,
-} from "../../../Redux/Customers/Product/Action";
+} from "../../../redux/Customers/Product/Action";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 

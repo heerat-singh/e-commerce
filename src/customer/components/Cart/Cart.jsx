@@ -4,7 +4,7 @@ import { Badge, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { getCart } from "../../../Redux/Customers/Cart/Action";
+import { getCart } from "../../../redux/Customers/Cart/Action";
 
 const Cart = () => {
     const dispatch = useDispatch();

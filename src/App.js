@@ -1,11 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Navigation from './customer/Components/NavBar/Navigation';
-import CustomerRoutes from './Routers/CustomerRoutes';
-//import AdminRoutes from './Routers/AdminRoutes';
-import NotFound from './pages/Notfound';
-//import AdminPannel from './Admin/AdminPannel';
-// import Routers from './Routers/Routers';
+import CustomerRoutes from './routers/CustomerRoutes';
+import AdminPannel from "./admin/AdminPannel";
+
 
 function App() {
     const isAdmin=true;
@@ -14,7 +11,7 @@ function App() {
 
             <Routes>
                 <Route path="/*" element={<CustomerRoutes />} />
-               //
+                <Route path="/admin/*" element={<AdminPannel />} />
 
             </Routes>
         </div>

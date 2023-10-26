@@ -7,7 +7,7 @@ import {
     XMarkIcon,
 } from "@heroicons/react/24/outline";
 
-//import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Avatar, Button, Menu, MenuItem } from "@mui/material";
 import { navigation } from "../../../config/navigationMenu";
 import AuthModal from "../Auth/AuthModal";
@@ -22,14 +22,14 @@ function classNames(...classes) {
 
 export default function Navigation() {
     const [open, setOpen] = useState(false);
-    //const navigate = useNavigate();
+    const navigate = useNavigate();
     const dispatch = useDispatch();
     const { auth,cart } = useSelector((store) => store);
     const [openAuthModal, setOpenAuthModal] = useState(false);
     const [anchorEl, setAnchorEl] = useState(null);
     const openUserMenu = Boolean(anchorEl);
     const jwt = localStorage.getItem("jwt");
-    //const location=useLocation();
+    const location=useLocation();
 
     useEffect(() => {
         if (jwt) {

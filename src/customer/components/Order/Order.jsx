@@ -1,15 +1,15 @@
 import { Box, Grid } from "@mui/material";
 import React, { useEffect, useSyncExternalStore } from "react";
 import OrderCard from "./OrderCard";
-import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+
 import { useDispatch, useSelector } from "react-redux";
-import { getOrderHistory } from "../../../Redux/Customers/Order/Action";
+import { getOrderHistory } from "../../../redux/Customers/Order/Action";
 
 const orderStatus = [
     { label: "On The Way", value: "onTheWay" },
-    { label: "Delivered", value: "delevered" },
+    { label: "Delivered", value: "delivered" },
     { label: "Cancelled", value: "cancelled" },
-    { label: "Returned", vlue: "returned" },
+    { label: "Returned", value: "returned" },
 ];
 
 const Order = () => {
