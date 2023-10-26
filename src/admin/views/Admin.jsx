@@ -1,7 +1,7 @@
 // ** MUI Imports
 import Grid from "@mui/material/Grid";
 import AdminPannel from "../../styles/AdminPannelWrapper";
-import Achivement from "../tables/Achivement";
+import Achievement from "../tables/Achievement";
 import MonthlyOverview from "../tables/MonthlyOverView";
 import WeeklyOverview from "../tables/WeeklyOverview";
 import TotalEarning from "../tables/TotalEarning";
@@ -14,6 +14,7 @@ import SalesOverTime from "../tables/SalesOverTime";
 import RecentOrders from "../tables/RecentOrders";
 
 import { BriefcaseVariantOutline, CurrencyUsd, HelpCircleOutline, Poll } from "mdi-material-ui";
+import RecentlyAddedProducts from "../tables/RecentlyAddedProducts";
 
 const darkTheme1 = createTheme({
     palette: {
@@ -35,7 +36,7 @@ const Dashboard = () => {
                 <AdminPannel>
                     <Grid container spacing={2}>
                         <Grid item xs={12} md={4}>
-                            <Achivement />
+                            <Achievement />
                         </Grid>
                         <Grid item xs={12} md={8}>
                             <MonthlyOverview />
@@ -99,7 +100,7 @@ const Dashboard = () => {
                             <RecentOrders />
                         </Grid>
                         <Grid item xs={12} md={12} lg={8}>
-                            <RecentlyAddeddProducts />
+                            <RecentlyAddedProducts />
                         </Grid>
                         <Grid item xs={12} md={6} lg={4}>
                             <SalesOverTime/>

@@ -6,11 +6,10 @@ import { Box, Button, Grid, LinearProgress, Rating } from "@mui/material";
 import HomeProductCard from "../../Home/HomeProductCard";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { findProductById } from "../../../../Redux/Customers/Product/Action";
-import { addItemToCart } from "../../../../Redux/Customers/Cart/Action";
-import { getAllReviews } from "../../../../Redux/Customers/Review/Action";
-import { lengha_page1 } from "../../../../Data/Women/LenghaCholi";
-import { gounsPage1 } from "../../../../Data/Gouns/gouns";
+import { findProductById } from "../../../../redux/Customers/Product/Action";
+import { addItemToCart } from "../../../../redux/Customers/Cart/Action";
+import { getAllReviews } from "../../../../redux/Customers/Review/Action";
+import { gounsPage1 } from "../../../../data/gouns/gouns";
 
 const product = {
     name: "Basic Tee 6-Pack",

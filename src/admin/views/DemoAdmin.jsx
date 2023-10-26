@@ -18,7 +18,7 @@ import { useTheme } from '@mui/material/styles';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import ListItemIcon from '@mui/material/ListItemIcon';
-import AdminNavbar from '../Navigation/AdminNavbar';
+import AdminNavbar from '../navigation/AdminNavBar';
 
 const drawerWidth = 240;
 

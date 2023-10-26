@@ -54,7 +54,7 @@ export default function Navigation() {
     };
 
     const handleCategoryClick = (category, section, item, close) => {
-       // navigate(`/${category.id}/${section.id}/${item.id}`);
+        navigate(`/${category.id}/${section.id}/${item.id}`);
         close();
     };
 
@@ -63,7 +63,7 @@ export default function Navigation() {
             handleClose();
         }
         if(location.pathname==="/login" || location.pathname==="/register"){
-          //  navigate(-1)
+            navigate(-1)
         }
     }, [auth.user]);
 
@@ -73,7 +73,7 @@ export default function Navigation() {
     };
     const handleMyOrderClick=()=>{
         handleCloseUserMenu()
-       // navigate("/account/order")
+        navigate("/account/order")
     }
 
     return (

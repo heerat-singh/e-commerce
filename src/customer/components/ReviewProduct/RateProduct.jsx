@@ -10,10 +10,9 @@ import {
 import React, { useEffect, useState } from "react";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import { useDispatch, useSelector } from "react-redux";
-import { createReview } from "../../../Redux/Customers/Review/Action";
+import { createReview } from "../../../redux/Customers/Review/Action";
 import { useNavigate, useParams } from "react-router-dom";
-import { findProductById } from "../../../Redux/Customers/Product/Action";
-import CustomerRoutes from "../../../Routers/CustomerRoutes";
+import { findProductById } from "../../../redux/Customers/Product/Action";
 
 const RateProduct = () => {
     const [formData, setFormData] = useState({ title: "", description: "" });
