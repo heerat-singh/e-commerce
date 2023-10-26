@@ -7,14 +7,14 @@ import {
     XMarkIcon,
 } from "@heroicons/react/24/outline";
 
-import { Link, useLocation, useNavigate } from "react-router-dom";
+//import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Avatar, Button, Menu, MenuItem } from "@mui/material";
 import { navigation } from "../../../config/navigationMenu";
 import AuthModal from "../Auth/AuthModal";
 import { useDispatch, useSelector } from "react-redux";
 import { deepPurple } from "@mui/material/colors";
-import { getUser, logout } from "../../../Redux/Auth/Action";
-import { getCart } from "../../../Redux/Customers/Cart/Action";
+import { getUser, logout } from "../../../redux/Auth/Action";
+import { getCart } from "../../../redux/Customers/Cart/Action";
 
 function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
@@ -22,14 +22,14 @@ function classNames(...classes) {
 
 export default function Navigation() {
     const [open, setOpen] = useState(false);
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
     const dispatch = useDispatch();
     const { auth,cart } = useSelector((store) => store);
     const [openAuthModal, setOpenAuthModal] = useState(false);
     const [anchorEl, setAnchorEl] = useState(null);
     const openUserMenu = Boolean(anchorEl);
     const jwt = localStorage.getItem("jwt");
-    const location=useLocation();
+    //const location=useLocation();
 
     useEffect(() => {
         if (jwt) {
@@ -54,7 +54,7 @@ export default function Navigation() {
     };
 
     const handleCategoryClick = (category, section, item, close) => {
-        navigate(`/${category.id}/${section.id}/${item.id}`);
+       // navigate(`/${category.id}/${section.id}/${item.id}`);
         close();
     };
 
@@ -63,7 +63,7 @@ export default function Navigation() {
             handleClose();
         }
         if(location.pathname==="/login" || location.pathname==="/register"){
-            navigate(-1)
+          //  navigate(-1)
         }
     }, [auth.user]);
 
@@ -73,7 +73,7 @@ export default function Navigation() {
     };
     const handleMyOrderClick=()=>{
         handleCloseUserMenu()
-        navigate("/account/order")
+       // navigate("/account/order")
     }
 
     return (
