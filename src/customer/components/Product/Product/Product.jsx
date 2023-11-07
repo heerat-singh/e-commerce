@@ -12,20 +12,17 @@ import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
-import FormLabel from "@mui/material/FormLabel";
 import Pagination from "@mui/material/Pagination";
 
 import { filters, singleFilter, sortOptions } from "./FilterData";
 import ProductCard from "../ProductCard/ProductCard";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { productdata } from "../../../../data";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import {
     findProducts,
     findProductsByCategory,
 } from "../../../../redux/Customers/Product/Action";
-import { deepPurple } from "@mui/material/colors";
 import { Backdrop, CircularProgress } from "@mui/material";
 
 function classNames(...classes) {
@@ -42,7 +39,9 @@ export default function Product() {
     const location = useLocation();
     const [isLoaderOpen, setIsLoaderOpen] = useState(false);
 
-    const handleLoderClose = () => {
+    console.log("data--->>",customersProduct);
+
+    const handleLoaderClose = () => {
         setIsLoaderOpen(false);
     };
 
@@ -190,7 +189,7 @@ export default function Product() {
 
                                     {/* Filters */}
                                     <form className="mt-4 border-t border-gray-200">
-                                        {filters.map((section) => (
+                                        {filters.map((section ) => (
                                             <Disclosure
                                                 as="div"
                                                 key={section.id}
@@ -485,7 +484,7 @@ export default function Product() {
                     <Backdrop
                         sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
                         open={isLoaderOpen}
-                        onClick={handleLoderClose}
+                        onClick={handleLoaderClose}
                     >
                         <CircularProgress color="inherit" />
                     </Backdrop>

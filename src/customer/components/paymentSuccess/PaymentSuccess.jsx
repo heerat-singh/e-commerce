@@ -10,8 +10,8 @@ import AddressCard from "../address/Address";
 import { useParams } from "react-router-dom";
 
 const PaymentSuccess = () => {
-    // razorpay_payment_link_reference_id
-    // razorpay_payment_id
+    // stripe_payment_link_reference_id
+    // stripe_payment_id
     const [paymentId, setPaymentId] = useState("");
     const [referenceId, setReferenceId] = useState("");
     const [paymentStatus, setPaymentStatus] = useState("");
@@ -26,9 +26,9 @@ const PaymentSuccess = () => {
     useEffect(() => {
         console.log("orderId",orderId)
         const urlParams = new URLSearchParams(window.location.search);
-        setPaymentId(urlParams.get("razorpay_payment_id"));
-        setReferenceId(urlParams.get("razorpay_payment_link_reference_id"));
-        setPaymentStatus(urlParams.get("razorpay_payment_link_status"));
+        setPaymentId(urlParams.get("stripe_payment_id"));
+        setReferenceId(urlParams.get("stripe_payment_link_reference_id"));
+        setPaymentStatus(urlParams.get("stripe_payment_link_status"));
     }, []);
 
     useEffect(() => {
@@ -76,7 +76,7 @@ const PaymentSuccess = () => {
                                         <span>Color: pink</span> <span>Size: {item.size}</span>
                                     </p>
                                     <p>Seller: {item.product.brand}</p>
-                                    <p>₹{item.price}</p>
+                                    <p>${item.price}</p>
                                 </div>
                             </div>
                         </Grid>

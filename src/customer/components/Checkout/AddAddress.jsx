@@ -11,7 +11,7 @@ export default function AddDeliveryAddressForm({ handleNext }) {
     const dispatch = useDispatch();
     const jwt = localStorage.getItem("jwt");
     const { auth } = useSelector((store) => store);
-    const [selectedAddress, setSelectedAdress] = useState(null);
+    const [selectedAddress, setSelectedAddress] = useState(null);
 
     // console.log("auth", auth);
 
@@ -36,6 +36,7 @@ export default function AddDeliveryAddressForm({ handleNext }) {
     };
 
     const handleCreateOrder = (item) => {
+        console.log("Add data",item);
         dispatch(createOrder({ address:item, jwt, navigate }));
         handleNext();
     };
@@ -46,7 +47,7 @@ export default function AddDeliveryAddressForm({ handleNext }) {
                 <Box className="border rounded-md shadow-md h-[30.5rem] overflow-y-scroll ">
                     {auth.user?.addresses.map((item) => (
                         <div
-                            onClick={() => setSelectedAdress(item)}
+                            onClick={() => setSelectedAddress(item)}
                             className="p-5 py-7 border-b cursor-pointer"
                         >
                             {" "}
@@ -59,7 +60,7 @@ export default function AddDeliveryAddressForm({ handleNext }) {
                                     color="primary"
                                     onClick={()=>handleCreateOrder(item)}
                                 >
-                                    Deliverd Here
+                                    Deliver Here
                                 </Button>
                             )}
                         </div>
@@ -149,7 +150,7 @@ export default function AddDeliveryAddressForm({ handleNext }) {
                                     variant="contained"
                                     color="primary"
                                 >
-                                    Deliverd Here
+                                    Deliver Here
                                 </Button>
                             </Grid>
                         </Grid>

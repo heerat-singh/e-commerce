@@ -11,7 +11,7 @@ import OrderSummary from "./OrderSummary";
 
 const steps = [
     "Login",
-    "Delivery Adress",
+    "Delivery Address",
     "Order Summary",
     "Payment",
 ];
@@ -94,7 +94,7 @@ export default function Checkout() {
                         {step == 2? <AddDeliveryAddressForm handleNext={handleNext} />:<OrderSummary/>}
                     </div>
 
-                    {/* <AddDeliveryAddressForm handleNext={handleNext} /> */}
+                    {/*<AddDeliveryAddressForm handleNext={handleNext} />*/ }
 
 
                 </React.Fragment>

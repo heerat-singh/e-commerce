@@ -8,10 +8,6 @@ import { orderReducer } from "./Customers/Order/Reducer";
 import adminOrderReducer from "./Admin/Orders/Reducer";
 import ReviewReducer from "./Customers/Review/Reducer";
 
-
-
-
-
 const rootReducers=combineReducers({
 
     auth:authReducer,

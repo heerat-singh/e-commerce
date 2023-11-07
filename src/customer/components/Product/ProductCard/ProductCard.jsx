@@ -9,6 +9,7 @@ const ProductCard = ({ product }) => {
 
     const handleNavigate=()=>{
         navigate(`/product/${product?.id}`)
+        // navigate('/product/2')
     }
 
     return (

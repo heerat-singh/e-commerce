@@ -55,6 +55,7 @@ export default function Navigation() {
 
     const handleCategoryClick = (category, section, item, close) => {
         navigate(`/${category.id}/${section.id}/${item.id}`);
+        window.location.reload(false);
         close();
     };
 
@@ -69,7 +70,10 @@ export default function Navigation() {
 
     const handleLogout = () => {
         handleCloseUserMenu();
-        dispatch(logout());
+        dispatch(logout(jwt));
+        navigate("/")
+        window.location.reload(false);
+
     };
     const handleMyOrderClick=()=>{
         handleCloseUserMenu()
@@ -265,8 +269,8 @@ export default function Navigation() {
                                 <Link to="/">
                                     <span className="sr-only">Your Company</span>
                                     <img
-                                        src="https://res.cloudinary.com/ddkso1wxi/image/upload/v1675919455/Logo/Copy_of_Zosh_Academy_nblljp.png"
-                                        alt="Shopwithzosh"
+                                        src="https://heeratsingh.netlify.app/static/media/logo.5d9bcf11a8d0686269cd.png"
+                                        alt="ShopwithHS"
                                         className="h-8 w-8 mr-2"
                                     />
                                 </Link>

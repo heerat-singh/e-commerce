@@ -1,5 +1,6 @@
 import React from "react";
-import { productdata } from "../../../data";
+import { productdata } from "../../../../data";
+import {dressPage1} from '../../../../data/dress/page1'
 import ProductCard from "../ProductCard/ProductCard";
 
 const ProductPage = () => {
